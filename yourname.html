@@ -10,9 +10,8 @@
     <h1>Quiz Time!</h1>
     <p>Please enter your details and answer the following quiz questions:</p>
 
-    <!-- Form for the quiz -->
+    <!-- Quiz -->
     <form id="quizForm" action="javascript:void(0);">
-        <!-- Visitor Information -->
         <label for="firstName">First Name <span>*</span></label>
         <input type="text" id="firstName" name="firstName" required>
         <small id="firstNameError" class="error-message"></small><br>
@@ -27,44 +26,53 @@
 
         <h3>Quiz Questions:</h3>
         
-        <!-- Radio Button Question -->
+        <!-- Question 1 -->
         <label for="q1">1. How old are you? <span>*</span></label><br>
-        <input type="radio" id="paris" name="q1" value="Paris"> Paris<br>
-        <input type="radio" id="rome" name="q1" value="Rome"> Rome<br>
-        <input type="radio" id="london" name="q1" value="London"> London<br>
+        <input type="radio" id="18-25" name="q1" value="18-25"> 18-25<br>
+        <input type="radio" id="26-35" name="q1" value="26-35"> 26-35<br>
+        <input type="radio" id="36-49" name="q1" value="36-49"> 36-49<br>
+        <input type="radio" id="50-65" name="q1" value="50-65"> 50-65<br>
+        <input type="radio" id="65+" name="q1" value="65+"> 65+<br>
         <small id="q1Error" class="error-message"></small><br>
 
-        <!-- Checkbox Question -->
-        <label for="q2">2. Select the programming languages you know (choose at least one): <span>*</span></label><br>
-        <input type="checkbox" id="js" name="q2" value="JavaScript"> JavaScript<br>
-        <input type="checkbox" id="python" name="q2" value="Python"> Python<br>
-        <input type="checkbox" id="csharp" name="q2" value="C#"> C#<br>
+        <!-- Question 2 -->
+        <label for="q2">2. What is your favorite color? (choose at least one): <span>*</span></label><br>
+        <input type="checkbox" id="blue" name="q2" value="blue"> Blue<br>
+        <input type="checkbox" id="green" name="q2" value="green"> Green<br>
+        <input type="checkbox" id="red" name="q2" value="red"> Red<br>
+        <input type="checkbox" id="yellow" name="q2" value="yellow"> Yellow<br>
+        <input type="checkbox" id="purple" name="q2" value="purple"> Purple<br>
         <small id="q2Error" class="error-message"></small><br>
 
-        <!-- Open-ended Question -->
-        <label for="q3">3. In one sentence, describe your favorite hobby:</label><br>
-        <textarea id="q3" name="q3" rows="4" cols="50"></textarea><br>
 
-        <!-- New Checkbox Question -->
+        <!-- Question 3 -->
+        <label for="q3">4. Select your favorite fruits (choose at least one): <span>*</span></label><br>
+        <input type="checkbox" id="apple" name="q3" value="Apple"> Apple<br>
+        <input type="checkbox" id="banana" name="q3" value="Banana"> Banana<br>
+        <input type="checkbox" id="pear" name="q3" value="pear"> Pear<br>
+        <small id="q3Error" class="error-message"></small><br>
+
+        <!-- Question 4 -->
+        <label for="q4">3. In one sentence, describe your favorite hobby:</label><br>
+        <textarea id="q4" name="q4" rows="4" cols="50"></textarea><br>
+
+        <!-- Question 4 -->
         <label for="q4">4. Select your favorite fruits (choose at least one): <span>*</span></label><br>
         <input type="checkbox" id="apple" name="q4" value="Apple"> Apple<br>
         <input type="checkbox" id="banana" name="q4" value="Banana"> Banana<br>
         <input type="checkbox" id="cherry" name="q4" value="Cherry"> Cherry<br>
         <small id="q4Error" class="error-message"></small><br>
 
-        <!-- New Textbox Question -->
+        <!-- Question 5 -->
         <label for="q5">5. What is your dream job?</label><br>
         <textarea id="q5" name="q5" rows="4" cols="50"></textarea><br>
         <small id="q5Error" class="error-message"></small><br>
 
-        <!-- Submit Button -->
         <button type="submit" onclick="validateForm()">Submit</button>
     </form>
 
-    <!-- Success Message -->
     <p id="successMessage" style="display: none; color: green;">Quiz submitted successfully!</p>
 
-    <!-- JavaScript -->
     <script src="yourname.js"></script>
 </body>
 </html>
