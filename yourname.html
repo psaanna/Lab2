@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Quiz</title>
+    <link rel="stylesheet" href="yourname.css">
+</head>
+<body>
+    <h1>Quiz Time!</h1>
+    <p>Please enter your details and answer the following quiz questions:</p>
+
+    <!-- Form for the quiz -->
+    <form id="quizForm" action="javascript:void(0);">
+        <!-- Visitor Information -->
+        <label for="firstName">First Name <span>*</span></label>
+        <input type="text" id="firstName" name="firstName" required>
+        <small id="firstNameError" class="error-message"></small><br>
+
+        <label for="lastName">Last Name <span>*</span></label>
+        <input type="text" id="lastName" name="lastName" required>
+        <small id="lastNameError" class="error-message"></small><br>
+
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" required>
+        <small id="emailError" class="error-message"></small><br>
+
+        <h3>Quiz Questions:</h3>
+        
+        <!-- Radio Button Question -->
+        <label for="q1">1. How old are you? <span>*</span></label><br>
+        <input type="radio" id="paris" name="q1" value="Paris"> Paris<br>
+        <input type="radio" id="rome" name="q1" value="Rome"> Rome<br>
+        <input type="radio" id="london" name="q1" value="London"> London<br>
+        <small id="q1Error" class="error-message"></small><br>
+
+        <!-- Checkbox Question -->
+        <label for="q2">2. Select the programming languages you know (choose at least one): <span>*</span></label><br>
+        <input type="checkbox" id="js" name="q2" value="JavaScript"> JavaScript<br>
+        <input type="checkbox" id="python" name="q2" value="Python"> Python<br>
+        <input type="checkbox" id="csharp" name="q2" value="C#"> C#<br>
+        <small id="q2Error" class="error-message"></small><br>
+
+        <!-- Open-ended Question -->
+        <label for="q3">3. In one sentence, describe your favorite hobby:</label><br>
+        <textarea id="q3" name="q3" rows="4" cols="50"></textarea><br>
+
+        <!-- New Checkbox Question -->
+        <label for="q4">4. Select your favorite fruits (choose at least one): <span>*</span></label><br>
+        <input type="checkbox" id="apple" name="q4" value="Apple"> Apple<br>
+        <input type="checkbox" id="banana" name="q4" value="Banana"> Banana<br>
+        <input type="checkbox" id="cherry" name="q4" value="Cherry"> Cherry<br>
+        <small id="q4Error" class="error-message"></small><br>
+
+        <!-- New Textbox Question -->
+        <label for="q5">5. What is your dream job?</label><br>
+        <textarea id="q5" name="q5" rows="4" cols="50"></textarea><br>
+        <small id="q5Error" class="error-message"></small><br>
+
+        <!-- Submit Button -->
+        <button type="submit" onclick="validateForm()">Submit</button>
+    </form>
+
+    <!-- Success Message -->
+    <p id="successMessage" style="display: none; color: green;">Quiz submitted successfully!</p>
+
+    <!-- JavaScript -->
+    <script src="yourname.js"></script>
+</body>
+</html>
+
