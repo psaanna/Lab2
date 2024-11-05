@@ -1,8 +1,8 @@
 function validateForm() {
-    // Clear previous error messages
+
     clearErrors();
 
-    // Get form values
+    // Form values
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -31,7 +31,7 @@ function validateForm() {
         isValid = false;
     }
 
-    
+
     // Q1
     if (!q1) {
         document.getElementById('q1Error').textContent = "Please select an answer for Question 1.";
@@ -81,7 +81,7 @@ function validateForm() {
         }
     }
 
-    // Display success message if the form is valid
+    // Success message
     if (isValid) {
         document.getElementById('successMessage').style.display = 'block';
     } else {
@@ -97,10 +97,10 @@ function clearErrors() {
     document.getElementById('q2Error').textContent = "";
     document.getElementById('q3Error').textContent = "";
     document.getElementById('q4Error').textContent = ""; 
-    document.getElementById('q5Error').textContent = ""; // Clear error for Q5
+    document.getElementById('q5Error').textContent = "";
 }
 
-// Email validation function
+// Email validation 
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
