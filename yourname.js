@@ -71,7 +71,6 @@ function validateForm() {
     }
 }
 
-// Function to clear all previous error messages
 function clearErrors() {
     document.getElementById('firstNameError').textContent = "";
     document.getElementById('lastNameError').textContent = "";
@@ -79,7 +78,7 @@ function clearErrors() {
     document.getElementById('q1Error').textContent = "";
     document.getElementById('q2Error').textContent = "";
     document.getElementById('q4Error').textContent = "";
-    document.getElementById('q3Error').textContent = ""; // Clear error for Question 3
+    document.getElementById('q3Error').textContent = ""; 
     document.getElementById('q5Error').textContent = "";
 }
 
