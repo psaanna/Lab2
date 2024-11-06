@@ -76,7 +76,7 @@ function validateForm() {
 
     // Q5
     if (q5.length > 0) {
-        const ratingPattern = /^[1-5]$/; // Only allows numbers 1 through 5
+        const ratingPattern = /^[1-5]$/; 
         if (!ratingPattern.test(q5)) {
             document.getElementById('q5Error').textContent = "Please enter a number between 1 and 5.";
             isValid = false;
