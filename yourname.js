@@ -32,12 +32,10 @@ function validateForm() {
         document.getElementById('emailError').textContent = "Please enter a valid email address.";
         isValid = false;
     }
-
-    // Email validation 
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-    }
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
 
 
     // Q1
@@ -71,13 +69,9 @@ function validateForm() {
         }
     }
 
-    // Q4
-    if (q4.length === 0) {
-        document.getElementById('q4Error').textContent = "Please answer Question 4.";
-        isValid = false;
-    } else if (q4.toLowerCase() !== "tokyo") {
+    // Q4 
+    if (q4.length > 0 && q4.toLowerCase() !== "tokyo") {
         document.getElementById('q4Error').textContent = "The correct answer is 'Tokyo'.";
-        isValid = false;
     }
 
     // Q5
