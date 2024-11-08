@@ -33,6 +33,12 @@ function validateForm() {
         isValid = false;
     }
 
+    // Email validation 
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
 
     // Q1
     if (!q1) {
@@ -102,8 +108,4 @@ function clearErrors() {
     document.getElementById('q5Error').textContent = "";
 }
 
-// Email validation 
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}
+
